@@ -14,7 +14,7 @@
               RowDefinitions="*, *, *, *, *, *, *">
 
             <Label Grid.Row="1" Grid.Column="0"
-                   Text="EtecFlix - alteração"
+                   Text="EtecFlix"
                    Grid.ColumnSpan="2"
                    Style="{StaticResource Titulo}"/>
             <Button Grid.Row="2"
