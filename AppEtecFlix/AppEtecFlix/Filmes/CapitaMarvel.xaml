@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEtecFlix.Filmes.CapitaMarvel"
+             Title="App EtecFlix - Capitã Marvel"
+             BackgroundColor="#2f2f30">
+    
+    <StackLayout Orientation="Vertical">
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="131"/>
+                <RowDefinition Height="300"/>
+            </Grid.RowDefinitions>
+            <Label Text="EtecFlix" Style="{StaticResource Titulo}"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"/>
+
+            <WebView Grid.Row="1" Grid.Column="0" 
+                     Grid.ColumnSpan="2"
+                     x:Name="visualizador"
+                     VerticalOptions="FillAndExpand"
+                     BackgroundColor="#2f2f30"
+                     Source="https://www.youtube.com/embed/JhY6Yy4wtb4"/>
+
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="2" VerticalOptions="Center">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Título" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="0" Grid.Column="0" HorizontalOptions="Fill"
+                           Margin="10,0,0,0"/>
+                    <Label Text="Capitã Marvel" Style="{StaticResource LabelTextoBranco}"
+                           Grid.Row="0" Grid.Column="1" HorizontalOptions="Fill"/>
+                    
+                    <Label Text="Ano de Lançamento" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="1" Grid.Column="0" HorizontalOptions="Fill"
+                           Margin="10,0,0,0"/>
+                    <Label Text="7 de março de 2019" Style="{StaticResource LabelTextoBranco}"
+                           Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill"/>
+                    
+                    <Label Text="Direção" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="2" Grid.Column="0" HorizontalOptions="Fill"
+                           Margin="10,0,0,0"/>
+                    <Label Text="Anna Bolden, Ryan Fleck" Style="{StaticResource LabelTextoBranco}"
+                           Grid.Row="2" Grid.Column="1" HorizontalOptions="Fill"/>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Sinopse" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="0" Grid.Column="0"/>
+                    <Frame Style="{StaticResource LabelSinopse}">
+                        <ScrollView VerticalScrollBarVisibility="Always">
+                            <Label x:Name="Sinopse" Style="{StaticResource LabelTextoBranco}"
+                                   Grid.Row="1"
+                                   Grid.RowSpan="2"
+                                   Grid.Column="0" 
+                                   Text="Capitã Marvel é uma alienígena Kree que se encontra no meio de uma batalha entre seu povo e os Skrulls. Com a ajuda de Nick Fury, ela tenta impedir uma invasão na Terra, descobrir os segredos de seu passado e pôr um fim ao antigo conflito."/>
+                        </ScrollView>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+    
+</ContentPage>

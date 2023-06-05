@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEtecFlix.MainPage"
+             Title="Pagina Inicial"
+             BackgroundColor="#2f2f30">
+
+        
+        <Grid ColumnDefinitions="*, *"
+              RowSpacing="2"
+              ColumnSpacing="2"
+              Padding="0"
+              VerticalOptions="Fill"
+              RowDefinitions="*, *, *, *, *, *, *">
+
+            <Label Grid.Row="1" Grid.Column="0"
+                   Text="EtecFlix"
+                   Grid.ColumnSpan="2"
+                   Style="{StaticResource Titulo}"/>
+            <Button Grid.Row="2"
+                    Grid.Column="0"
+                    Text="Aventura"
+                    Clicked="Button_Clicked"
+                    Style="{StaticResource ButtonVermelhoMenu}"/>
+            <Button Grid.Row="2"
+                    Grid.Column="1"
+                    Text="Comedia"
+                    Clicked="Button_Clicked_1"
+                    Style="{StaticResource ButtonVermelhoMenu}"/>
+            <Button Grid.Row="3"
+                    Grid.Column="0"
+                    Text="Drama"
+                    Clicked="Button_Clicked_2"
+                    Style="{StaticResource ButtonVermelhoMenu}"/>
+            <Button Grid.Row="3"
+                    Grid.Column="1"
+                    Text="Terror"
+                    Clicked="Button_Clicked_3"
+                    Style="{StaticResource ButtonVermelhoMenu}"/>
+            <Button Grid.Row="4"
+                    Grid.Column="0"
+                    Text="Ficção Cientifica"
+                    Clicked="Button_Clicked_4"
+                    Style="{StaticResource ButtonVermelhoMenu}"/>
+            <Button Grid.Row="4"
+                    Grid.Column="1"
+                    Text="Suspense"
+                    Clicked="Button_Clicked_5"
+                    Style="{StaticResource ButtonVermelhoMenu}"/>
+            <Button Grid.Row="5"
+                    Grid.Column="0"
+                    Text="Infantil"
+                    Clicked="Button_Clicked_6"
+                    Style="{StaticResource ButtonVermelhoMenu}"/>
+            <Button Grid.Row="5"
+                    Grid.Column="1"
+                    Text="Animação"
+                    Clicked="Button_Clicked_7"
+                    Style="{StaticResource ButtonVermelhoMenu}"/>
+            <Button Grid.Row="6"
+                    Grid.Column="0"
+                    Text="Documentario"
+                    Clicked="Button_Clicked_8"
+                    Style="{StaticResource ButtonVermelhoMenu}"/>
+            <Button Grid.Row="6"
+                    Grid.Column="1"
+                    Text="Guerra"
+                    Clicked="Button_Clicked_9"
+                    Style="{StaticResource ButtonVermelhoMenu}"/>
+            <Button Grid.Row="7"
+                    Grid.Column="0"
+                    Text="Nacional" 
+                    Clicked="Button_Clicked_10"
+                    Style="{StaticResource ButtonVermelhoMenu}"/>
+            <Button Grid.Row="7"
+                    Grid.Column="1"
+                    Text="Romance" 
+                    Clicked="Button_Clicked_11"
+                    Style="{StaticResource ButtonVermelhoMenu}"/>
+
+            <Image Grid.Row="8" Grid.ColumnSpan="2"/>
+    </Grid>
+    
+
+</ContentPage>

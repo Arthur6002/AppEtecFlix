@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEtecFlix.Filmes.ComoTreinaroSeuDragao"
+             Title="App EtecFlix - Come Treinar o Seu Dragão"
+             BackgroundColor="#2f2f30">
+    
+    <StackLayout Orientation="Vertical">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="131"/>
+                <RowDefinition Height="300"/>
+            </Grid.RowDefinitions>
+            <Label Text="EtecFlix" Style="{StaticResource Titulo}"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"/>
+
+            <WebView Grid.Row="1" Grid.Column="0" 
+                     Grid.ColumnSpan="2"
+                     x:Name="visualizador"
+                     VerticalOptions="FillAndExpand"
+                     BackgroundColor="#2f2f30"
+                     Source="https://www.youtube.com/embed/uv1V9BOb2M8"/>
+
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="2" VerticalOptions="Center">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Título" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="0" Grid.Column="0" HorizontalOptions="Fill"
+                           Margin="10,0,0,0"/>
+                    <Label Text="Como Treinar o Seu Dragão" Style="{StaticResource LabelTextoBranco}"
+                           Grid.Row="0" Grid.Column="1" HorizontalOptions="Fill"/>
+
+                    <Label Text="Ano de Lançamento" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="1" Grid.Column="0" HorizontalOptions="Fill"
+                           Margin="10,0,0,0"/>
+                    <Label Text="26 de março de 2010" Style="{StaticResource LabelTextoBranco}"
+                           Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill"/>
+
+                    <Label Text="Direção" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="2" Grid.Column="0" HorizontalOptions="Fill"
+                           Margin="10,0,0,0"/>
+                    <Label Text=" Dean DeBlois, Chris Sanders" Style="{StaticResource LabelTextoBranco}"
+                           Grid.Row="2" Grid.Column="1" HorizontalOptions="Fill"/>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Sinopse" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="0" Grid.Column="0"/>
+                    <Frame Style="{StaticResource LabelSinopse}">
+                        <ScrollView VerticalScrollBarVisibility="Always">
+                            <Label x:Name="Sinopse" Style="{StaticResource LabelTextoBranco}"
+                                   Grid.Row="1"
+                                   Grid.RowSpan="2"
+                                   Grid.Column="0" 
+                                   Text="Soluço é um jovem viking que não tem capacidade para lutar contra os dragões, como é a tradição local. Sua vida muda quando ele ajuda um dragão que lhe mostra toda a verdade. Juntos, eles tentam provar que dragões e humanos podem ser amigos."/>
+                        </ScrollView>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEtecFlix.Categorias.Drama"
+             Title="App EtecFlix - Drama"
+             BackgroundColor="#2f2f30">
+    <StackLayout Orientation="Vertical">
+        <Label Text="Drama" Style="{StaticResource Titulo}"/>
+
+        <ScrollView>
+            <Grid Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="300"/>
+                </Grid.RowDefinitions>
+
+                <ImageButton Grid.Row="0" Grid.Column="0"
+                             x:Name="btnCoringa"
+                             Style="{StaticResource ButtonPosters}"
+                             Clicked="btnCoringa_Clicked"/>
+
+                <ImageButton Grid.Row="0" Grid.Column="1"
+                             x:Name="btnGladiador"
+                             Style="{StaticResource ButtonPosters}"
+                             Clicked="btnGladiador_Clicked"/>
+
+                <ImageButton Grid.Row="1" Grid.Column="0"
+                             x:Name="btnORegresso"
+                             Style="{StaticResource ButtonPosters}"
+                             Clicked="btnORegresso_Clicked"/>
+
+                <ImageButton Grid.Row="1" Grid.Column="1"
+                             x:Name="btnSextaFeira13"
+                             Style="{StaticResource ButtonPosters}"
+                             Clicked="btnSextaFeira13_Clicked"/>
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

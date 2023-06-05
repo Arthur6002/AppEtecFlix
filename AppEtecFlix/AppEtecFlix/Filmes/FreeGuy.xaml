@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEtecFlix.Filmes.FreeGuy"
+             BackgroundColor="#2f2f30"
+             Title="App EtecFlix - FreeGuy">
+    <StackLayout Orientation="Vertical">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="131"/>
+                <RowDefinition Height="300"/>
+            </Grid.RowDefinitions>
+            <Label Text="EtecFlix" Style="{StaticResource Titulo}"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"/>
+
+            <WebView Grid.Row="1" Grid.Column="0" 
+                     Grid.ColumnSpan="2"
+                     x:Name="visualizador"
+                     VerticalOptions="FillAndExpand"
+                     BackgroundColor="#2f2f30"
+                     Source="https://www.youtube.com/embed/_XNs_Z-2Kwc"/>
+
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="2" VerticalOptions="Center">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Título" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="0" Grid.Column="0" HorizontalOptions="Fill"
+                           Margin="10,0,0,0"/>
+                    <Label Text="Free Guy" Style="{StaticResource LabelTextoBranco}"
+                           Grid.Row="0" Grid.Column="1" HorizontalOptions="Fill"/>
+
+                    <Label Text="Ano de Lançamento" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="1" Grid.Column="0" HorizontalOptions="Fill"
+                           Margin="10,0,0,0"/>
+                    <Label Text="19 de agosto de 2021" Style="{StaticResource LabelTextoBranco}"
+                           Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill"/>
+
+                    <Label Text="Direção" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="2" Grid.Column="0" HorizontalOptions="Fill"
+                           Margin="10,0,0,0"/>
+                    <Label Text="Shawn Levy" Style="{StaticResource LabelTextoBranco}"
+                           Grid.Row="2" Grid.Column="1" HorizontalOptions="Fill"/>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Sinopse" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="0" Grid.Column="0"/>
+                    <Frame Style="{StaticResource LabelSinopse}">
+                        <ScrollView VerticalScrollBarVisibility="Always">
+                            <Label x:Name="Sinopse" Style="{StaticResource LabelTextoBranco}"
+                                   Grid.Row="1"
+                                   Grid.RowSpan="2"
+                                   Grid.Column="0" 
+                                   Text="Um caixa de banco preso a uma entediante rotina tem sua vida virada de cabeça para baixo quando descobre que é um personagem em um jogo interativo. Agora ele precisa aceitar sua realidade e lidar com o fato de que é o único que pode salvar o mundo."/>
+                        </ScrollView>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

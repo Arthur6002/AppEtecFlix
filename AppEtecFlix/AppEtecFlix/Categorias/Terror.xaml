@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEtecFlix.Categorias.Terror"
+             BackgroundColor="#2f2f30"
+             Title="App EtecFlix - Terror">
+    <StackLayout Orientation="Vertical">
+        <Label Text="Terror" Style="{StaticResource Titulo}"/>
+
+        <ScrollView>
+            <Grid Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="300"/>
+                </Grid.RowDefinitions>
+
+                <ImageButton Grid.Row="0" Grid.Column="0"
+                             x:Name="btnOExorcista"
+                             Style="{StaticResource ButtonPosters}"
+                             Clicked="btnOExorcista_Clicked"/>
+
+                <ImageButton Grid.Row="0" Grid.Column="1"
+                             x:Name="btnPanico"
+                             Style="{StaticResource ButtonPosters}"
+                             Clicked="btnPanico_Clicked"/>
+
+                <ImageButton Grid.Row="1" Grid.Column="0"
+                             x:Name="btnSexaFeira13"
+                             Style="{StaticResource ButtonPosters}"
+                             Clicked="btnSexaFeira13_Clicked"/>
+
+                <ImageButton Grid.Row="1" Grid.Column="1"
+                             x:Name="btnInvocacaodoMal"
+                             Style="{StaticResource ButtonPosters}"
+                             Clicked="btnInvocacaodoMal_Clicked"/>
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
