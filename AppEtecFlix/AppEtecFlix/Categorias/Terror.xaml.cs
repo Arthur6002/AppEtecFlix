@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppEtecFlix.Filmes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,22 +24,50 @@ namespace AppEtecFlix.Categorias
 
         private void btnOExorcista_Clicked(object sender, EventArgs e)
         {
-
+            try
+            {
+                Navigation.PushAsync(new OExorcista());
+            }
+            catch(Exception ex)
+            {
+                DisplayAlert("Ops", ex.Message, "Ok");
+            }
         }
 
         private void btnPanico_Clicked(object sender, EventArgs e)
         {
-
+            try
+            {
+                Navigation.PushAsync(new Panico());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Ops", ex.Message, "Ok");
+            }
         }
 
         private void btnSexaFeira13_Clicked(object sender, EventArgs e)
         {
-
+            try
+            {
+                Navigation.PushAsync(new SextaFeira13());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Ops", ex.Message, "Ok");
+            }
         }
 
         private void btnInvocacaodoMal_Clicked(object sender, EventArgs e)
         {
-
+            try
+            {
+                Navigation.PushAsync(new InvocacaodoMal());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Ops", ex.Message, "Ok");
+            }
         }
     }
 }

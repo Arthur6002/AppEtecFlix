@@ -1,12 +1,87 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppEtecFlix.Filmes.Panico">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="AppEtecFlix.Filmes.Panico"
+             Title="App EtecFlix - Pânico"
+             BackgroundColor="#2f2f30">
+    <StackLayout Orientation="Vertical">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="131"/>
+                <RowDefinition Height="300"/>
+            </Grid.RowDefinitions>
+            <Label Text="EtecFlix" Style="{StaticResource Titulo}"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"/>
+
+            <WebView Grid.Row="1" Grid.Column="0" 
+                     Grid.ColumnSpan="2"
+                     x:Name="visualizador"
+                     VerticalOptions="FillAndExpand"
+                     BackgroundColor="#2f2f30"
+                     Source="https://www.youtube.com/embed/swzTZ2mQypM"/>
+
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="2" VerticalOptions="Center">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Título" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="0" Grid.Column="0" HorizontalOptions="Fill"
+                           Margin="10,0,0,0"/>
+                    <Label Text="Pânico" Style="{StaticResource LabelTextoBranco}"
+                           Grid.Row="0" Grid.Column="1" HorizontalOptions="Fill"/>
+
+                    <Label Text="Ano de Lançamento" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="1" Grid.Column="0" HorizontalOptions="Fill"
+                           Margin="10,0,0,0"/>
+                    <Label Text="31 de janeiro de 1997" Style="{StaticResource LabelTextoBranco}"
+                           Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill"/>
+
+                    <Label Text="Direção" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="2" Grid.Column="0" HorizontalOptions="Fill"
+                           Margin="10,0,0,0"/>
+                    <Label Text="Wes Craven" Style="{StaticResource LabelTextoBranco}"
+                           Grid.Row="2" Grid.Column="1" HorizontalOptions="Fill"/>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Sinopse" Style="{StaticResource LabelTextoVermelho}"
+                           Grid.Row="0" Grid.Column="0"/>
+                    <Frame Style="{StaticResource LabelSinopse}">
+                        <ScrollView VerticalScrollBarVisibility="Always">
+                            <Label x:Name="Sinopse" Style="{StaticResource LabelTextoBranco}"
+                                   Grid.Row="1"
+                                   Grid.RowSpan="2"
+                                   Grid.Column="0" 
+                                   Text="Um grupo de jovens enfrenta um assassino mascarado que testa seus conhecimentos sobre filmes de terror. A pequena cidade de Woodsboro nunca mais será a mesma."/>
+                        </ScrollView>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
 </ContentPage>

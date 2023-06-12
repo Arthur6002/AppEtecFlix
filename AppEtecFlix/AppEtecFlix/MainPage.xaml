@@ -37,7 +37,7 @@
                     Text="Terror"
                     Clicked="Button_Clicked_3"
                     Style="{StaticResource ButtonVermelhoMenu}"/>
-            <Button Grid.Row="4"
+            <!--<Button Grid.Row="4"
                     Grid.Column="0"
                     Text="Ficção Cientifica"
                     Clicked="Button_Clicked_4"
@@ -78,7 +78,8 @@
                     Clicked="Button_Clicked_11"
                     Style="{StaticResource ButtonVermelhoMenu}"/>
 
-            <Image Grid.Row="8" Grid.ColumnSpan="2"/>
+            <Image Grid.Row="8" Grid.ColumnSpan="2"/>-->
+            
     </Grid>
     
 
